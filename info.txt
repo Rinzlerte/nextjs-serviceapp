@@ -1,5 +1,37 @@
+-- ui elemes  , theme switching
+
 npx shadcn@latest init
 npm install next-themes
 npm @radix-ui/react-icons
 npx shadcn@latest add
+
+
+-- error handler sentry.io
+
 npx @sentry/wizard@latest -i nextjs
+
+
+-- auth service  kinde.com
+
+
+npm i @kinde-oss/kinde-auth-nextjs
+
+
+
+-- create Postgres data with Neon service Account
+
+npm install @neondatabase/serverless
+
+
+-- install ORM for site  - headless TypeScript ORM
+
+npm i drizzle-orm   
+npm i -D drizzle-kit tsx dotenv
+
+create folder db. 
+create schema and drizzle.config.ts
+
+add script in package.json "db:generate": "drizzle-kit generate"  -- create instances
+add script in package.json "db:migrate": "tsx ./src/db/migrate.ts"  -- merge instances up to neon service
+
+
