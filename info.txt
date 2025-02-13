@@ -1,0 +1,5 @@
+npx shadcn@latest init
+npm install next-themes
+npm @radix-ui/react-icons
+npx shadcn@latest add
+npx @sentry/wizard@latest -i nextjs
