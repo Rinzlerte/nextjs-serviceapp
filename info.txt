@@ -35,3 +35,17 @@ add script in package.json "db:generate": "drizzle-kit generate"  -- create inst
 add script in package.json "db:migrate": "tsx ./src/db/migrate.ts"  -- merge instances up to neon service
 
 
+add routes with query data:
+/tickets/form/page.tsx 
+/customers/form/page.tsx
+
+-- install data type checkers 
+
+npm i zod drizzle-zod react-hook-form @hookform/resolvers
+
+
+
+
+
+
+
