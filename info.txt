@@ -46,6 +46,11 @@ npm i zod drizzle-zod react-hook-form @hookform/resolvers
 
 -- create zods schemas  /src/zod-schemas
 
+ dir zod..
+
+-- add permisions control
+
+npm i @kinde/management-api-js
 
 
 
