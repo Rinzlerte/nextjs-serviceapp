@@ -1,5 +1,5 @@
 import { pgTable, serial, varchar, boolean, timestamp, integer, text } from "drizzle-orm/pg-core"
-import { relations } from "drizzle-orm";
+import { relations } from "drizzle-orm"
 
 export const customers = pgTable("customers", {
     id: serial("id").primaryKey(),
@@ -18,7 +18,6 @@ export const customers = pgTable("customers", {
     updatedAt: timestamp("updated_at").notNull().defaultNow().$onUpdate(() => new Date()),
 })
 
-
 export const tickets = pgTable("tickets", {
     id: serial("id").primaryKey(),
     customerId: integer("customer_id").notNull().references(() => customers.id),
@@ -30,14 +29,12 @@ export const tickets = pgTable("tickets", {
     updatedAt: timestamp("updated_at").notNull().defaultNow().$onUpdate(() => new Date()),
 })
 
-
 // Create relations 
 export const customersRelations = relations(customers,
     ({ many }) => ({
         tickets: many(tickets),
     })
 )
-
 
 export const ticketsRelations = relations(tickets,
     ({ one }) => ({

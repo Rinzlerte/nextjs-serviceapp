@@ -44,6 +44,7 @@ add routes with query data:
 npm i zod drizzle-zod react-hook-form @hookform/resolvers
 
 
+-- create zods schemas  /src/zod-schemas
 
 
 
