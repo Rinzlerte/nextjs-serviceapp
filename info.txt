@@ -52,6 +52,16 @@ npm i zod drizzle-zod react-hook-form @hookform/resolvers
 
 npm i @kinde/management-api-js
 
+add settings in kinde dashboard - create api aplication
+get and add env for api aplication / as :
+
+KINDE_DOMAIN: Kinde domain e.g. mybusiness.kinde.com
+KINDE_MANAGEMENT_CLIENT_ID: Client ID of your M2M token
+KINDE_MANAGEMENT_CLIENT_SECRET: Client Secret of your M2M token
+
+
+
+
 
 
 
