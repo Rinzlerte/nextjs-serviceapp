@@ -39,14 +39,20 @@ add routes with query data:
 /tickets/form/page.tsx 
 /customers/form/page.tsx
 
+
 -- install data type checkers 
 
 npm i zod drizzle-zod react-hook-form @hookform/resolvers
 
 
+
+
 -- create zods schemas  /src/zod-schemas
 
  dir zod..
+
+
+
 
 -- add permisions control
 
@@ -60,6 +66,10 @@ KINDE_MANAGEMENT_CLIENT_ID: Client ID of your M2M token
 KINDE_MANAGEMENT_CLIENT_SECRET: Client Secret of your M2M token
 
 
+
+-- add server actions   -- next-save-action
+
+npm i next-safe-action
 
 
 

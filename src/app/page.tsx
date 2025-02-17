@@ -1,4 +1,4 @@
-import Link from "next/link"
+import NextLink from "@/components/NextLink";
 
 export default function Home() {
   return (
@@ -9,9 +9,9 @@ export default function Home() {
           <p>
             Open Daily: 9am to 7pm
           </p>
-          <Link href="tel:5555555555" className="hover:underline">
+          <NextLink href="tel:5555555555" className="hover:underline">
             555-555-5555
-          </Link>
+          </NextLink>
         </div>
       </main>
     </div>
