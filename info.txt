@@ -1,3 +1,5 @@
+APP DEV FLOW
+
 -- ui elemes  , theme switching
 
 npx shadcn@latest init
@@ -46,17 +48,15 @@ npm i zod drizzle-zod react-hook-form @hookform/resolvers
 
 
 
-
 -- create zods schemas  /src/zod-schemas
 
  dir zod..
 
 
-
-
 -- add permisions control
 
 npm i @kinde/management-api-js
+npm i @kinde/
 
 add settings in kinde dashboard - create api aplication
 get and add env for api aplication / as :
@@ -66,12 +66,65 @@ KINDE_MANAGEMENT_CLIENT_ID: Client ID of your M2M token
 KINDE_MANAGEMENT_CLIENT_SECRET: Client Secret of your M2M token
 
 
+-- add / create server actions   -- next-save-action
 
--- add server actions   -- next-save-action
+npm i next-safe-action 
 
-npm i next-safe-action
+creates /actions/ separated actions for tickets and customers
+
+creates search forms with results render on each page / customer and tickets/
+creates header component 
 
 
 
+-- installing shadcn table if not installed;
 
 
+update customers page. integrate Sentry for compare perfomance.
+
+npm i @tanstack/react-table
+
+update and fix at getCustomerSearchResults query
+
+update and fix getTicketSearchResults query
+
+update and fix getOpenTickets query
+
+create a ticket table component 
+add table pagination by usting a table states
+add column filters with:
+--- create filter and  debounce input
+--- update tickets page for integrate table
+
+add column sorting
+
+
+
+-- add react table live updates --
+
+add data pooling with a some interval
+create usePolling hook in /hooks
+update tickettable component
+update filter component
+update notfound page - add go home link
+create loading component
+update home page add loading component make tests and delete it
+
+
+
+ticket table update
+filter update
+ticket form update
+
+update getCustomerSearchResults.ts query -- add order by
+
+update customerform, and customer page - check permision on server non on client side
+
+update safe-action in  /lib directory
+update CustomerTable add colapse menu
+
+
+
+npm audit report
+
+npm audit fix --legacy-peer-deps --dry-run

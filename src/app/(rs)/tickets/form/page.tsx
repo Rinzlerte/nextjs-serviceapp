@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-non-null-asserted-optional-chain */
 import { getCustomer } from "@/lib/queries/getCustomer";
 import { getTicket } from "@/lib/queries/getTicket";
 import { BackButton } from "@/components/BackButton";
@@ -82,7 +83,7 @@ export default async function TicketFormPage({
 
                 const techs = users ? users.map(user => ({ id: user.email!, description: user.email! })) : []
 
-                return <TicketForm customer={customer} techs={techs} />
+                return <TicketForm customer={customer} techs={techs} isManager={isManager} />
             } else {
                 return <TicketForm customer={customer} />
             }
@@ -108,13 +109,22 @@ export default async function TicketFormPage({
                 kindeInit() // Initializes the Kinde Management API 
                 const { users } = await Users.getUsers()
 
-                const techs = users ? users.map(user => ({ id: user.email!, description: user.email! })) : []
+                const techs = users ? users.map(user => ({ id: user.email?.toLowerCase()!, description: user.email?.toLowerCase()! })) : []
 
-                return <TicketForm customer={customer} ticket={ticket} techs={techs} />
+                return <TicketForm 
+                customer={customer} 
+                ticket={ticket} 
+                techs={techs} 
+                isManager={isManager} 
+                />
             } else {
                 const isEditable = user.email?.toLowerCase() === ticket.tech.toLowerCase()
 
-                return <TicketForm customer={customer} ticket={ticket} isEditable={isEditable} />
+                return <TicketForm 
+                customer={customer} 
+                ticket={ticket}
+                 isEditable={isEditable}
+                  />
             }
         }
 
